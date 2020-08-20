@@ -1,0 +1,14 @@
+.person-images{
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    margin-bottom: auto;
+    display: block;
+    padding: 0;
+    border-radius: 160px;
+    box-shadow: 2px 2px 16px 2px gray;
+    margin-bottom: 25px;
+}
+
