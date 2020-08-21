@@ -1,5 +1,11 @@
 <?php
+session_start();
+define('localhost','DBHOST');
+define('root','DBUSER');
+define('','password');
+define('user','DBNAME');
 
+$connection=new mysql(DBHOST,)
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +44,14 @@
         <div class="content">
             <h1 style="padding-top:35px;padding-bottom:35px;">User Details</h1>
 
+<?php
 
+ while($row=mysqli_fetch_assoc($sql)){
+
+
+ }
+
+?>
 
             <table class="table table-dark">
                 <thead>
