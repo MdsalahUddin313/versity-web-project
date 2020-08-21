@@ -4,8 +4,13 @@ define('localhost','DBHOST');
 define('root','DBUSER');
 define('','password');
 define('user','DBNAME');
+$username=$_REQUEST['username'];
+echo ($username);
 
-$connection=new mysql(DBHOST,)
+
+$sql = "SELECT id, username, email FROM users";
+ // $result = $conn->query($sql);
+  
 ?>
 
 <!DOCTYPE html>
@@ -45,12 +50,6 @@ $connection=new mysql(DBHOST,)
             <h1 style="padding-top:35px;padding-bottom:35px;">User Details</h1>
 
 <?php
-
- while($row=mysqli_fetch_assoc($sql)){
-
-
- }
-
 ?>
 
             <table class="table table-dark">
@@ -65,6 +64,8 @@ $connection=new mysql(DBHOST,)
                 </thead>
                 <tbody>
                     <tr>
+
+                    
                         <th scope="row">1</th>
                         <td>Mark</td>
                         <td>Otto</td>
