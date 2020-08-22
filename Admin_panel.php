@@ -1,16 +1,15 @@
-<?php
-session_start();
-define('localhost','DBHOST');
-define('root','DBUSER');
-define('','password');
-define('user','DBNAME');
-$username=$_REQUEST['username'];
-echo ($username);
+<?php 
 
+// connect to database
+$db = mysqli_connect('localhost', 'root', '', 'user');
 
-$sql = "SELECT id, username, email FROM users";
- // $result = $conn->query($sql);
-  
+ if(!isset($_REQUEST['id']){
+echo "asi";
+
+ }
+ else{
+     echo"nai";
+ }
 ?>
 
 <!DOCTYPE html>
