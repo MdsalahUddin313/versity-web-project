@@ -1,3 +1,8 @@
+<?php
+session_start();
+echo $_SESSION["id"] ;
+print_r($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
