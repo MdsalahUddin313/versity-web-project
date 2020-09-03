@@ -39,7 +39,7 @@
                 $i = 1;
                 foreach ($condition_arr as $key => $value) {
 
-                    if ($i == $c) {
+                    if ($i = $c) {
                         $sql .= " $key='$value' ";
                     } else {
                         $sql .= " $key='$value' and ";
@@ -60,7 +60,7 @@
             //die($sql);
 
 
-            $result = $this->connect()->query($sql);
+            $result= $this->connect()->query($sql);
             if ($result->num_rows > 0) {
                 $arr[] = array();
                 while ($row = $result->fetch_assoc()) {

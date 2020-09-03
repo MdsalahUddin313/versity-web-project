@@ -1,9 +1,11 @@
 <?php
 require './dataserver.php';
-$condition_arr= array('','','','');
-$obj=new query();
-$result=$obj->getData('users','','','','id','DESC','2');
 
+
+$condition=array('id'=>1);
+$obj=new query();
+$result=$obj->getData('users','','','','id','DESC','');
+print_r($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +78,7 @@ $result=$obj->getData('users','','','','id','DESC','2');
             </tr>
             <?php
             $i++;
-        
+               
 }
 }else{
     
