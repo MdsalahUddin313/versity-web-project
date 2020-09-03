@@ -88,7 +88,7 @@
                 $value = "'" . $value . "'";
                 $sql = " insert into $table($field)values($value) ";
                 $result = $this->connect()->query($sql);
-                die($sql);
+                //die($sql);
             }
         }
 
