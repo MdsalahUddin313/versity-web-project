@@ -4,7 +4,7 @@ require './dataserver.php';
 
 $condition=array('id'=>1);
 $obj=new query();
-$result=$obj->getData('users','','','','id','DESC','');
+$result=$obj->getData('users','','','','id','ASC','');
 
 ?>
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ $result=$obj->getData('users','','','','id','DESC','');
         $i=1;
         if(isset($result[0]) ){
             foreach($result as $link){
-                
+                if(!empty($link['id'])){
         ?>
              <tr>
                 <th scope="row"><?php echo $i?></th>
@@ -78,7 +78,7 @@ $result=$obj->getData('users','','','','id','DESC','');
             </tr>
             <?php
             $i++;
-               
+        } 
            
         }
 

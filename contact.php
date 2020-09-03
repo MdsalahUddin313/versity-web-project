@@ -1,3 +1,22 @@
+<?php
+require './dataserver.php';
+
+$object=new query();
+if(isset($_POST['submit'])){
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $phone=$_POST['phone'];
+    $massage_sub=$_POST['massage_sub'];
+    $massage=$_POST['massage'];
+
+    $values[]=array($name,$email,$phone,$massage_sub,$massage);
+    print_r($values);
+
+
+}
+$result=$object->InsertData('','');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,35 +47,35 @@ color: darkcyan;">Feel free to contact us anytime at +880-100-1xxxxxx.
             <div class="col-md-6">
             <h5 style="text-align: center;
             margin-bottom:25px">Send Us A Message</h5>
-                <form>
+                <form action="./contact.php" method="$_POST">
                     <div class="form-group row">
                         <label for="inputText" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="name" placeholder="Name">
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Name">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputEmail" class="col-sm-2 col-form-label">Your Email</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputNumber" class="col-sm-2 col-form-label">Phone</label>
+                        <label for="inputNumber" class="col-sm-2 col-form-label" max="10" >Phone</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" id="phone" placeholder="Phone Number">
+                            <input type="tel" id="phone" name="phone" min="0" max="15"  class="form-control" placeholder="Phone Number">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputText" class="col-sm-2 col-form-label">Massage Subject</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputText" placeholder="Massage Subject">
+                            <input name='massagesub' type="text" class="form-control" id="inputText" placeholder="Massage Subject">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputText" class="col-sm-2 col-form-label">Massage</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-massage" id="inputText" placeholder="Massage">
+                            <input name='massage' type="text" class="form-massage" id="inputText" placeholder="Massage">
                         </div>
                     </div>
 
