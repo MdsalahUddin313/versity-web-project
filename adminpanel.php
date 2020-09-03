@@ -94,13 +94,17 @@ $result=$obj->getData('users','','','','id','ASC','');
         </tbody>
     </table>
 
-
+    <?php
+                $result_massage=$obj->getData('contacts','','','','','','');
+                
+                ?>
 
     <div class="visitors-massages" style="margin-top:65px;">
     <h1 style="padding-top:35px;padding-bottom:35px;">Visitors Massages And Details</h1>
 
     <table class="table table-dark">
         <thead>
+           
             <tr>
                 <th scope="col">id</th>
                 <th scope="col">User Name</th>
@@ -109,19 +113,43 @@ $result=$obj->getData('users','','','','id','ASC','');
                 <th scope="col">Subject of Massage</th>
                 <th scope="col">Massage</th>
             </tr>
+
+
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>201458745</td>
-                <td>Otto@mn.com</td>
-                <td>Subject</td>
-                <td>Massages length</td>
 
+        <?php
+        $j=1;
+            if(isset($result_massage[0])){
+                foreach($result_massage as $link_contact){
+                    if(!empty($link_contact['id'])){
+
+            ?>
+            <tr>
+                <th scope="row"><?php echo $j ?></th>
+                <td><?php echo $link_contact['name']?></td>
+                
+                <td><?php echo $link_contact['phone']?></td>
+                <td><?php echo $link_contact['email']?></td>
+                
+                <td><?php echo $link_contact['massage_sub']?></td>
+                <td><?php echo $link_contact['massage']?></td>
                 <td><button class="btn btn-success">Edit</button><button style="margin-left:3px" class="btn btn-danger">Delete</button></td>
             </tr>
-        </tbody>
+            <?php
+            $j++;
+        }
+    }
+}else{
+            ?>
+    <tr>
+        <td>Data Not found</td>
+    </tr>  
+    <?php
+    }
+    ?>
+    
+    </tbody>
     </table>
     
     </div>

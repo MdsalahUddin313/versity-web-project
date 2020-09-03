@@ -2,17 +2,20 @@
 require './dataserver.php';
 
 $object=new query();
-if(isset($_POST['submit'])){
+
+if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
     $name=$_POST['name'];
     $email=$_POST['email'];
     $phone=$_POST['phone'];
-    $massage_sub=$_POST['massage_sub'];
+    $massage_sub=$_POST['massagesub'];
     $massage=$_POST['massage'];
 
-    $values[]=array($name,$email,$phone,$massage_sub,$massage);
+    $values[]=array('sa','s','$phone','$massage_sub','$massage');
     print_r($values);
 
 
+}else{
+    echo "there is some problem";
 }
 $result=$object->InsertData('','');
 
@@ -33,10 +36,7 @@ $result=$object->InsertData('','');
 
 <body>
 <!--Header part-->
-<header>
-    <?php
-    include './header.php';
-    ?>
+
 </header>
     <section class="contact-form container">
         <div class="row">
@@ -47,7 +47,7 @@ color: darkcyan;">Feel free to contact us anytime at +880-100-1xxxxxx.
             <div class="col-md-6">
             <h5 style="text-align: center;
             margin-bottom:25px">Send Us A Message</h5>
-                <form action="./contact.php" method="$_POST">
+                <form action="contact.php" method="POST">
                     <div class="form-group row">
                         <label for="inputText" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
