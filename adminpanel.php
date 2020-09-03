@@ -48,6 +48,8 @@ print_r($result);
 
     <table class="table table-dark">
         <thead>
+
+      
             <tr>
                 <th scope="col">id</th>
                 <th scope="col">User Name</th>
@@ -56,20 +58,36 @@ print_r($result);
                 <th scope="col">Custom Account</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
 
-            
+        <?php
+        if(isset($result[0])){
+            foreach($result as $link){
+                
+        ?>
+        <tbody> 
+             <tr>
                 <th scope="row">1</th>
-                <td>Mark</td>
+                <td></td>
                 <td>Otto</td>
                 <td>@mdo</td>
                 <td><button class="btn btn-success">Edit</button><button style="margin-left:3px" class="btn btn-danger">Delete</button></td>
-            </tr>
+            </tr>         
         </tbody>
     </table>
+    <?php
+    
+}
+}else{
+    
 
+?>
+<tbody>
+<tr>
+    <td>No results found</td>
+</tr>
+</tbody>
 
+<?php?>
 
     <div class="visitors-massages" style="margin-top:65px;">
     <h1 style="padding-top:35px;padding-bottom:35px;">Visitors Massages And Details</h1>
@@ -112,5 +130,4 @@ print_r($result);
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
