@@ -1,7 +1,10 @@
 <?php
-session_start();
-echo $_SESSION["id"] ;
-print_r($_SESSION);
+require './dataserver.php';
+$obj=new query();
+echo "<pre>";
+$condition_arr= array('username'=>'balda','email'=>'balsalharami@maki.com','password'=>'okhellokukur');
+$result=$obj->getData('users',$condition_arr,'','','','','');
+print_r($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
