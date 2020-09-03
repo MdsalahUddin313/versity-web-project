@@ -5,7 +5,7 @@ require './dataserver.php';
 $condition=array('id'=>1);
 $obj=new query();
 $result=$obj->getData('users','','','','id','DESC','');
-print_r($result);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +65,7 @@ print_r($result);
         <?php
 
         $i=1;
-        if(isset($result[0])){
+        if(isset($result[0]) ){
             foreach($result as $link){
                 
         ?>
@@ -79,7 +79,9 @@ print_r($result);
             <?php
             $i++;
                
-}
+           
+        }
+
 }else{
     
 
