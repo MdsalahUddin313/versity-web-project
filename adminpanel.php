@@ -1,10 +1,9 @@
 <?php
 require './dataserver.php';
+$condition_arr= array('','','','');
 $obj=new query();
-echo "<pre>";
-$condition_arr= array('username'=>'balda','email'=>'balsalharami@maki.com','password'=>'okhellokukur');
-$result=$obj->getData('users',$condition_arr,'','','','','');
-print_r($result);
+$result=$obj->getData('users','','','','id','DESC','2');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,35 +58,39 @@ print_r($result);
             </tr>
         </thead>
 
+       
+        <tbody> 
         <?php
+
+        $i=1;
         if(isset($result[0])){
             foreach($result as $link){
                 
         ?>
-        <tbody> 
              <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row"><?php echo $i?></th>
+                <td><?php echo $link['username']?></td>
+                <td><?php echo $link['password']?></td>
+                <td><?php echo $link['email']?></td>
                 <td><button class="btn btn-success">Edit</button><button style="margin-left:3px" class="btn btn-danger">Delete</button></td>
-            </tr>         
-        </tbody>
-    </table>
-    <?php
-    
+            </tr>
+            <?php
+            $i++;
+        
 }
 }else{
     
 
-?>
-<tbody>
+?>         
 <tr>
     <td>No results found</td>
 </tr>
-</tbody>
 
-<?php?>
+<?php }?>
+        </tbody>
+    </table>
+
+
 
     <div class="visitors-massages" style="margin-top:65px;">
     <h1 style="padding-top:35px;padding-bottom:35px;">Visitors Massages And Details</h1>
