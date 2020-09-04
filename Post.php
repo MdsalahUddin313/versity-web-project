@@ -1,6 +1,4 @@
-<?php
-  require './header.php';
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,11 +77,12 @@
 
 </style>
 </head>
-<body>
 
-<div class="header">
-  <h2>Blog Name</h2>
-</div>
+<body>
+<?php
+  include './header.php';
+?>
+
 
 <div class="row">
   <div class="leftcolumn">
