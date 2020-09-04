@@ -10,9 +10,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
     $massage_sub=$_POST['massagesub'];
     $massage=$_POST['massage'];
 
-    $values=array($name,$email,$phone,$massage_sub,$massage);
+    $values=array('name'=>$name,'email'=>$email,'phone'=>$phone,'massagesub'=>$massage_sub,'massage'=>$massage,'status'=>0);
    
     $result=$object->InsertData('contacts',$values);
+    print_r($values);
 
 
 }else{
@@ -52,31 +53,31 @@ color: darkcyan;">Feel free to contact us anytime at +880-100-1xxxxxx.
                     <div class="form-group row">
                         <label for="inputText" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                            <input value=<?php echo $name;?> name="name" type="text" class="form-control" id="name" placeholder="Name">
+                            <input name="name" type="text" class="form-control" id="name" placeholder="Name">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputEmail" class="col-sm-2 col-form-label">Your Email</label>
                         <div class="col-sm-10">
-                            <input value=<?php echo $email;?> name="email" type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputNumber" class="col-sm-2 col-form-label" max="10" >Phone</label>
                         <div class="col-sm-10">
-                            <input value=<?php echo $phone;?> type="tel" id="phone" name="phone" min="0" max="15"  class="form-control" placeholder="Phone Number">
+                            <input type="tel" id="phone" name="phone" min="0" max="15"  class="form-control" placeholder="Phone Number">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputText" class="col-sm-2 col-form-label">Massage Subject</label>
                         <div class="col-sm-10">
-                            <input value=<?php echo ($massage_sub)?> name='massagesub' type="text" class="form-control" id="inputText" placeholder="Massage Subject">
+                            <input name='massagesub' type="text" class="form-control" id="inputText" placeholder="Massage Subject">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputText" class="col-sm-2 col-form-label">Massage</label>
                         <div class="col-sm-10">
-                            <input value=<?php echo $massage;?> name='massage' type="text" class="form-massage" id="inputText" placeholder="Massage">
+                            <input name='massage' type="text" class="form-massage" id="inputText" placeholder="Massage">
                         </div>
                     </div>
 

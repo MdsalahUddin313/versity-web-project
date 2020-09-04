@@ -13,8 +13,8 @@ echo "<pre>";
 //$condition_arr= array('id'=>7);
 //$result=$obj->DeleteData('users',$condition_arr);
 
-$condition_arr= array('username'=>'balda','email'=>'balsalharami@maki.com','password'=>'okhellokukur');
-$result=$obj->UpdateData('users',$condition_arr,'id',14);
+//$condition_arr= array('username'=>'balda','email'=>'balsalharami@maki.com','password'=>'okhellokukur');
+//$result=$obj->UpdateData('users',$condition_arr,'id',14);
 
 print_r($result);
 
