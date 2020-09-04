@@ -1,15 +1,17 @@
 <?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Registration system PHP and MySQL</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 	<div class="header">
 		<h2>Register</h2>
 	</div>
-	
+
 	<form method="post" action="register.php">
 
 		<?php include('errors.php'); ?>
@@ -30,6 +32,14 @@
 			<label>Confirm password</label>
 			<input type="password" name="password_2">
 		</div>
+		<div style="padding:10px;">
+		<input type="radio" id="male" name="status" value="student">
+		<label for="Student">Are you want to learn as a student? </label><br>
+		</div>
+		<div style="padding:10px;">
+		<input type="radio" id="female" name="status" value="teacher">
+		<label for="Instructor">Are you want to join with us as a instructor?</label><br>
+		</div>
 		<div class="input-group">
 			<button type="submit" class="btn" name="reg_user">Register</button>
 		</div>
@@ -38,4 +48,5 @@
 		</p>
 	</form>
 </body>
+
 </html>

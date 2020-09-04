@@ -56,6 +56,7 @@ $result=$obj->getData('users','','','','id','ASC','');
                 <th scope="col">User Name</th>
                 <th scope="col">Password</th>
                 <th scope="col">Email</th>
+                <th scope="col">Status</th>
                 <th scope="col">Custom Account</th>
             </tr>
         </thead>
@@ -74,6 +75,7 @@ $result=$obj->getData('users','','','','id','ASC','');
                 <td><?php echo $link['username']?></td>
                 <td><?php echo $link['password']?></td>
                 <td><?php echo $link['email']?></td>
+                <td><?php echo $link['status']?></td>
                 <td><button class="btn btn-success">Edit</button><button style="margin-left:3px" class="btn btn-danger">Delete</button></td>
             </tr>
             <?php

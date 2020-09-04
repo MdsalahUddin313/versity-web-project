@@ -5,37 +5,40 @@
 <link ref="stylesheet" href="./css/post.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
+*{
     box-sizing: border-box;
   }
   
   /* Add a gray background color with some padding */
-  body {
+  post-part {
     font-family: Arial;
     padding: 20px;
     background: #f1f1f1;
   }
   
-  /* Header/Blog Title */
   .header {
-    padding: 30px;
+    padding: 0px;
     font-size: 40px;
     text-align: center;
     background: white;
   }
   
+  /* Header/Blog Title */
+  
   /* Create two unequal columns that floats next to each other */
   /* Left column */
   .leftcolumn {   
     float: left;
-    width: 75%;
+    width: 65%;
+    margin-left: 46px;
   }
   
   /* Right column */
   .rightcolumn {
     float: left;
-    width: 25%;
+    width: 30%;
     padding-left: 20px;
+    margin:auto;
   }
   
   /* Fake image */
@@ -46,12 +49,12 @@
   }
   
   /* Add a card effect for articles */
+  
   .card {
      background-color: white;
      padding: 20px;
      margin-top: 20px;
   }
-  
   /* Clear floats after the columns */
   .row:after {
     content: "";
@@ -84,7 +87,7 @@
 ?>
 
 
-<div class="row">
+<div class="row post-part">
   <div class="leftcolumn">
     <div class="card">
       <h2>TITLE HEADING</h2>
