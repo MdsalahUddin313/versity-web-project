@@ -62,6 +62,9 @@
                     <i class="fa fa-shopping-cart"></i> Cart
                     <span class="badge badge-light">3</span>
                 </a>
+                <a class="btn btn-info" style="margin-left: 5px;padding-left: 15px;padding-right:15px;">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </a>
             </form>
         </div>
     </div>
