@@ -17,6 +17,7 @@
 
             $connection = new mysqli($this->dbhost, $this->dbusername, $this->dbpassword, $this->dbname);
             return $connection;
+           
         }
     }
 
@@ -86,9 +87,10 @@
                 // echo $field;
 
                 $value = "'" . $value . "'";
-                $sql = " insert into $table($field)values($value) ";
+                $sql = " insert into $table ($field) values ($value) ";
                 $result = $this->connect()->query($sql);
-                //die($sql);
+               // die($sql);
+                
             }
         }
 
