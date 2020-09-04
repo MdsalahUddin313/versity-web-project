@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
     $massage_sub=$_POST['massagesub'];
     $massage=$_POST['massage'];
 
-    $values=array('name'=>$name,'email'=>$email,'phone'=>$phone,'massagesub'=>$massage_sub,'massage'=>$massage,'status'=>0);
+    $values=array('name'=>$name,'email'=>$email,'phone'=>$phone,'massage_sub'=>$massage_sub,'massage'=>$massage,'status'=>0);
    
     $result=$object->InsertData('contacts',$values);
     print_r($values);
