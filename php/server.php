@@ -19,6 +19,21 @@
 		$password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 		$status=mysqli_real_escape_string($db, $_POST['status']);
 
+		$user_status;
+		if($_SERVER["REQUEST METHOD"]=='post'){
+			if(isset($_POST['status'])){
+
+				$status_value=$_POST['status'];
+				if($status_value=='student'){
+					$status='student';
+				}
+				
+				if($status_value=='teacher'){
+					$status='teacher';
+				}
+			}
+
+		}
 		// form validation: ensure that the form is correctly filled
 		if (empty($username)) { array_push($errors, "Username is required"); }
 		if (empty($email)) { array_push($errors, "Email is required"); }
@@ -37,7 +52,7 @@
 
 			$_SESSION['username'] = $username;
 			$_SESSION['success'] = "You are now logged in";
-			header('location: index.php');
+			header('location: ../index.php');
 		}
 
 	}
@@ -64,7 +79,7 @@
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are now logged in";
-				header('location: index.php');
+				header('location: ../index.php');
 			}else {
 				array_push($errors, "Wrong username/password combination");
 			}

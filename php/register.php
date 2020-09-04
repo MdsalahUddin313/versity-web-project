@@ -33,11 +33,11 @@
 			<input type="password" name="password_2">
 		</div>
 		<div style="padding:10px;">
-		<input type="radio" id="male" name="status" value="student">
+		<input type="radio" id="student" name="status" value="student">
 		<label for="Student">Are you want to learn as a student? </label><br>
 		</div>
 		<div style="padding:10px;">
-		<input type="radio" id="female" name="status" value="teacher">
+		<input type="radio" id="teacher" name="status" value="teacher">
 		<label for="Instructor">Are you want to join with us as a instructor?</label><br>
 		</div>
 		<div class="input-group">
