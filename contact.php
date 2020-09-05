@@ -43,7 +43,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
 <body>
 <!--Header part-->
 
-</header>
     <section class="contact-form container">
         <div class="row">
            

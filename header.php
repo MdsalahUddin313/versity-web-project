@@ -59,37 +59,25 @@
                             </button>
                         </div>
                     </div>
-                    <a class="btn btn-success btn-sm ml-3" href="cart.php">
+                    <a class="btn btn-success btn-sm ml-3" style="margin-right:5px;" href="cart.php">
                         <i class="fa fa-shopping-cart"></i> Cart
                         <span class="badge badge-light">3</span>
                     </a>
-                    <a class="personlogo" style=" background-color:antiquewhite; 
-    border-radius:5px;
-    margin-left:5px;
-    padding-top:4px;
-    padding-bottom:4px;
-     padding-left: 15px;
-     padding-right:15px;
-">                    </a>
-                    <p style="color:white;
-                padding-left:5px;padding-right:5px;">
-                       
 
                     <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  <i class="fa fa-user-circle" aria-hidden="true"></i>
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#"> <?php if (isset($_SESSION['username'])) : ?>
-                            <p><strong><?php echo $_SESSION['username']; ?></strong></p>
-                            
-                    </p></a>
-    <a class="dropdown-item" href="#">  <a href="index.php?logout='1'" style="color: red;">logout</a>
-                        </a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <?php endif ?>
-  </div>
-</div>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"> <?php if (isset($_SESSION['username'])) : ?>
+                                    <p><strong><?php echo $_SESSION['username']; ?></strong></p>
+
+                                    </p></a>
+
+                            <a class="dropdown-item" href="index.php?logout='1'">Logout</a>
+                        <?php endif ?>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
