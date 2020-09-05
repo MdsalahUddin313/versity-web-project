@@ -39,9 +39,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="About_us.php">About us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Post.php">Our posts</a>
-                    </li>
+        
                     <li class="nav-item">
                         <a class="nav-link" href="cart.php">Cart </a>
                     </li>
@@ -64,18 +62,7 @@
                         <span class="badge badge-light">3</span>
                     </a>
 
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#"> <?php if (isset($_SESSION['username'])) : ?>
-                                    <p><strong><?php echo $_SESSION['username']; ?></strong></p>
-
-                                    </p></a>
-
-                            <a class="dropdown-item" href="index.php?logout='1'">Logout</a>
-                        <?php endif ?>
+                    
                         </div>
                     </div>
                 </form>

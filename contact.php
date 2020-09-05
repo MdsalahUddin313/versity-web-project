@@ -1,8 +1,9 @@
 <?php
-  include './header.php';
+ 
 ?>
 
 <?php
+ 
 require './dataserver.php';
 
 $object=new query();
