@@ -1,6 +1,9 @@
 <?php
   require './header.php';
+ require './dataserver.php';
 
+ $obj=new query();
+ $result=$obj->getData('product_cart_details','','','','','','','');
 ?>
 
 <!DOCTYPE html>
