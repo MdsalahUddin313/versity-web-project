@@ -1,14 +1,10 @@
 <?php 
 	session_start(); 
-
 	if (!isset($_SESSION['username'])) {
 		$_SESSION['msg'] = "You must log in first";
 		header('location: login.php');
 	}
-	
 	//pass data to adminpanel.php 
-
-
 	// if (isset($_SESSION['username'])) {
 	// 	$_SESSION['msg'] = "You are log in ";
 	// 	header('location: ./adminpanel.php');
