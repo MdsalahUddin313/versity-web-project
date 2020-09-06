@@ -23,26 +23,36 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" style="font-size:13px" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" style="font-size:13px" href="#">Link</a>
-      </li>
-   
-      <li class="nav-item">
-        <a class="nav-link disabled" style="font-size:13px" href="#">Disabled</a>
-      </li>
-    </ul>
-   
-      <form class="form-inline my-2 my-lg-0">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size:13px" href="./index.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size:13px" href="./About_us.php">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="./catagories.php" style="font-size:13px" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Catagories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="font-size:13px" href="#">Contact</a>
+                </li>
+            </ul>
+            <div>
+                <form style="border-radius:45px;" class="form-inline my-2 my-lg-0">
                     <div class="input-group input-group-sm">
                         <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
                         <div class="input-group-append">
@@ -50,27 +60,43 @@
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>
-    </form>
-     
-    <a class="btn btn-success btn-sm ml-3" style="margin-right:5px;" href="cart.php">
-                        <i class="fa fa-shopping-cart"></i> Cart
-                        <span class="badge badge-light">3</span>
-                    </a>
-                    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" style="font-size:13px" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-  </div>
-</nav>
+                </form>
 
-<!-- </nav> 
+                <a class="btn btn-success form-inline my-2 my-lg-0  btn-sm ml-3" style="margin-right:5px;" href="cart.php">
+                    <i class="fa fa-shopping-cart"></i> Cart
+                    <span class="badge badge-light">3</span>
+                </a>
+
+
+
+
+
+
+
+
+                <div style="margin-right:65px;" class="input-group">
+
+                    <div class="input-group-append">
+                        <button style="border-radius:95px;" class="btn btn-outline-secondary dropdown-toggle form-inline my-2 my-lg-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Hi,xxx</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>
+Login</a>
+                            <a style="color:red" class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>
+Sign out</a>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- </nav> 
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
                 <ul class="navbar-nav m-auto">
@@ -123,14 +149,14 @@
 
 
 
-             
 
-                    
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+
+
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
     </nav>
 
 </body>
@@ -151,4 +177,5 @@
 
                             <a class="dropdown-item" href="index.php?logout='1'">Logout</a>
                         <?php endif ?></div> -->
+
 </html>
