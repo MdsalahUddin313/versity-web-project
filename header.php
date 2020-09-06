@@ -48,7 +48,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="font-size:13px" href="#">Contact</a>
+                    <a class="nav-link" style="font-size:13px" href="./contact.php">Contact</a>
                 </li>
             </ul>
             <div>
@@ -62,7 +62,7 @@
                         </div>
                 </form>
 
-                <a class="btn btn-success form-inline my-2 my-lg-0  btn-sm ml-3" style="margin-right:5px;" href="cart.php">
+                <a class="btn btn-success form-inline my-2 my-lg-0  btn-sm ml-3" style="margin-right:15px;margin-left:5px;" href="cart.php">
                     <i class="fa fa-shopping-cart"></i> Cart
                     <span class="badge badge-light">3</span>
                 </a>
@@ -77,14 +77,15 @@
                 <div style="margin-right:65px;" class="input-group">
 
                     <div class="input-group-append">
-                        <button style="border-radius:95px;" class="btn btn-outline-secondary dropdown-toggle form-inline my-2 my-lg-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <button style="border-radius:95px;" class="btn btn btn-outline-success dropdown-toggle form-inline my-2 my-lg-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i>
                         </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Hi,xxx</a>
-                            <a class="dropdown-item" href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>
+                        <div class="dropdown-menu"><?php if (isset($_SESSION['username'])) : ?>
+                            <a class="dropdown-item" href="#">Hi,<?php echo $_SESSION['username']; ?></a>
+                            <a class="dropdown-item" href="./login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>
 Login</a>
-                            <a style="color:red" class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <a style="color:red" class="dropdown-item" href="index.php?logout='1'"><i class="fa fa-sign-out" aria-hidden="true"></i>
 Sign out</a>
+<?php endif ?>
                            
                         </div>
                     </div>
